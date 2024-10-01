@@ -16,7 +16,7 @@ SECRET_KEY = 'django-insecure-w25&ezvdkq*dy+*8-$@ffatd7k6*(6rmb5s0b_6jyyfkyo!6o!
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['boutique-ado-jc.herokuapp.com', 'local host']
+ALLOWED_HOSTS = ['boutique-ado-jc.herokuapp.com', 'local host', '127.0.0.1']
 
 
 # Application definition
@@ -46,6 +46,8 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'allauth.account.middleware.AccountMiddleware',
+
 ]
 
 ROOT_URLCONF = 'boutique_ado.urls'
